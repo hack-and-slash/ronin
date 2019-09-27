@@ -1,0 +1,41 @@
+.textInput {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.label {
+  margin-bottom: -2px;
+}
+
+.fieldWrapper {
+  width: 70%;
+  margin-left: 12px;
+  position: relative;
+}
+
+.fieldWrapper::before,
+.fieldWrapper::after {
+  content: '';
+  width: 10px;
+  position: absolute;
+  height: 1px;
+  background: #000;
+  bottom: 0;
+}
+
+.fieldWrapper::before {
+  left: -10px;
+}
+
+.fieldWrapper::after {
+  right: -10px;
+}
+
+.field {
+  border: 1px solid #000;
+  border-top: 0;
+  width: 100%;
+  line-height: 15px;
+  padding: 8px;
+}
