@@ -1,3 +1,36 @@
+.characterFields {
+  width: 50%;
+}
+
+.backgroundFields {
+  display: flex;
+}
+
 .fields {
   width: 400px;
+}
+
+.history {
+  margin-left: 20px;
+  width: 400px;
+}
+
+.historyLabel {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 6px;
+}
+
+.historyField {
+  width: 100%;
+  height: calc(100% - 30px);
+  display: block;
+  border: 1px solid #000;
+}
+
+.checkboxes {
+  display: flex;
+  margin: 32px 0;
+  justify-content: space-around;
 }
