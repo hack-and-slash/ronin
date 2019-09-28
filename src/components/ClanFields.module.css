@@ -1,0 +1,37 @@
+.clans {
+  width: 25%;
+}
+
+.clan {
+  border: 1px solid #000;
+  border-left: 4px solid #ae3922;
+  padding: 0 16px;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.clanName {
+  border: 1px solid #000;
+  padding: 8px;
+  display: flex;
+  margin-top: -8px;
+  background-color: #fff;
+}
+
+.clanNameField {
+  width: 77%;
+  margin-left: 2%;
+  border: 0;
+}
+
+.clanDescriptionField {
+  height: 60px;
+  width: 90%;
+  border: 0;
+}
+
+.clanLogo {
+  position: absolute;
+  right: -18px;
+  bottom: 12px;
+}

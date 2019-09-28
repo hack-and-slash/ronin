@@ -2,6 +2,7 @@ import React from 'react';
 import { Form } from 'react-final-form';
 
 import CharacterFields from 'components/CharacterFields';
+import ClanFields from 'components/ClanFields';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       render={({ handleSubmit }) => (
         <form onSubmit={handleSubmit}>
           <CharacterFields />
+          <ClanFields />
         </form>
       )}
     />
