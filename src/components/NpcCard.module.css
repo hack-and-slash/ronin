@@ -1,0 +1,27 @@
+.npcCard {
+  border: 1px solid #000;
+  padding: 0;
+}
+
+.npcCardFooter {
+  background-color: #ae3922;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-top: 1px solid #000;
+  margin-top: 8px;
+}
+
+.npcCardInput {
+  border: 0;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  margin-left: 4px;
+}
+
+.npcCardField {
+  display: flex;
+  padding: 8px;
+}

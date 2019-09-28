@@ -3,6 +3,7 @@ import { Form } from 'react-final-form';
 
 import CharacterFields from 'components/CharacterFields';
 import ClanFields from 'components/ClanFields';
+import AlliesFields from 'components/AlliesFields';
 
 import styles from './App.module.css';
 
@@ -13,8 +14,11 @@ function App() {
       render={({ handleSubmit }) => (
         <form onSubmit={handleSubmit}>
           <section className={styles.formWrapper}>
-            <CharacterFields />
-            <ClanFields />
+            <div className={styles.firstRow}>
+              <CharacterFields />
+              <ClanFields />
+            </div>
+            <AlliesFields />
           </section>
         </form>
       )}

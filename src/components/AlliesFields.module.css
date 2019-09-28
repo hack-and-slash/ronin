@@ -1,0 +1,11 @@
+.alliesFields {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+}
+
+.allyCard {
+  margin: 8px;
+  width: calc(33.33333333% - 16px);
+  padding: 0;
+}

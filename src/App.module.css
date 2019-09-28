@@ -1,4 +1,9 @@
 .formWrapper {
-  display: flex;
+  /* display: flex; */
   width: 75%;
+}
+
+.firstRow {
+  display: flex;
+  width: 100%;
 }
