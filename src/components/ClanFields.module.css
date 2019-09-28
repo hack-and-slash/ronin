@@ -1,5 +1,6 @@
 .clans {
   width: 25%;
+  margin-left: 3%;
 }
 
 .clan {
@@ -22,6 +23,8 @@
   width: 77%;
   margin-left: 2%;
   border: 0;
+  line-height: 20px;
+  padding: 0 8px;
 }
 
 .clanDescriptionField {
