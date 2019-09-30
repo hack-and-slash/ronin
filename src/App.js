@@ -4,6 +4,7 @@ import { Form } from 'react-final-form';
 import CharacterFields from 'components/CharacterFields';
 import ClanFields from 'components/ClanFields';
 import AlliesFields from 'components/AlliesFields';
+import EnemiesFields from 'components/EnemiesFields';
 
 import styles from './App.module.css';
 
@@ -18,7 +19,10 @@ function App() {
               <CharacterFields />
               <ClanFields />
             </div>
-            <AlliesFields />
+            <div className={styles.firstRow}>
+              <AlliesFields />
+              <EnemiesFields />
+            </div>
           </section>
         </form>
       )}

@@ -1,0 +1,14 @@
+.fieldCell {
+  border-bottom: 1px solid #000;
+}
+
+.fieldCell:nth-child(2) {
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+.field {
+  border: 0;
+  line-height: 18px;
+  padding: 4px;
+}
