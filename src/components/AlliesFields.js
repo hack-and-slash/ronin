@@ -1,17 +1,15 @@
 import React from 'react';
 
 import NpcCard from './NpcCard';
-
 import styles from './AlliesFields.module.css';
+
+const allies = Array(6).fill();
 
 const AlliesFields = () => (
   <section className={styles.alliesFields}>
-    <NpcCard className={styles.allyCard} />
-    <NpcCard className={styles.allyCard} />
-    <NpcCard className={styles.allyCard} />
-    <NpcCard className={styles.allyCard} />
-    <NpcCard className={styles.allyCard} />
-    <NpcCard className={styles.allyCard} />
+    {allies.map((ally, index) => (
+      <NpcCard className={styles.allyCard} key={`ally-${index}`} id={`ally-${index}`} />
+    ))}
   </section>
 );
 
