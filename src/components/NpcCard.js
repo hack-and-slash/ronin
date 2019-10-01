@@ -1,12 +1,11 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import { Field } from 'react-final-form';
 
 import Checkbox from './Fields/Checkbox';
-
 import styles from './NpcCard.module.css';
 
-const NpcCard = ({ className }) => (
+const NpcCard = ({ className, isVillain }) => (
   <fieldset className={className || styles.npcCard}>
     <div className={styles.npcCardField}>
       <label>Nome:</label>
@@ -20,20 +19,45 @@ const NpcCard = ({ className }) => (
       <label>Técnica:</label>
       <Field name="npc-tecnica" component="input" className={styles.npcCardInput} />
     </div>
-    <div className={styles.npcCardField}>
-      <label>Ocupação:</label>
-      <Field name="npc-appearence" component="input" className={styles.npcCardInput} />
-    </div>
+
+    {!isVillain && (
+      <div className={styles.npcCardField}>
+        <label>Ocupação:</label>
+        <Field name="npc-ocupacao" component="input" className={styles.npcCardInput} />
+      </div>
+    )}
+
+    {isVillain && (
+      <>
+      <div className={styles.npcCardField}>
+        <label>Combate:</label>
+        <Field name="npc-combate" component="input" className={styles.npcCardInput} />
+      </div>
+      <div className={styles.npcCardField}>
+        <label>Bloqueio:</label>
+        <Field name="npc-bloqueio" component="input" className={styles.npcCardInput} />
+      </div>
+      </>
+    )}
+
     <div className={styles.npcCardField}>
       <label>Histórico:</label>
-      <Field name="npc-historico" component="input" className={styles.npcCardInput} />
+      <Field name="npc-historico" component="textarea" className={styles.npcCardInput} />
     </div>
 
     <div className={styles.npcCardFooter}>
-      <label>
-        <Checkbox name="npc-aliado" type="checkbox" value="1" />
-        <span>Aliado</span>
-      </label>
+      {!isVillain && (
+        <label>
+          <Checkbox name="npc-aliado" type="checkbox" value="1" />
+          <span>Aliado</span>
+        </label>
+      )}
+      {isVillain && (
+        <label>
+          <Checkbox name="npc-derrotado" type="checkbox" value="1" />
+          <span>Derrotado</span>
+        </label>
+      )}
       <label>
         <span>Morto</span>
         <Checkbox name="npc-morto" type="checkbox" value="1" />
@@ -41,5 +65,10 @@ const NpcCard = ({ className }) => (
     </div>
   </fieldset>
 );
+
+NpcCard.propTypes = {
+  className: PropTypes.string,
+  isVillain: PropTypes.bool,
+};
 
 export default NpcCard;
