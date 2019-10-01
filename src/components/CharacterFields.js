@@ -54,6 +54,16 @@ const CharacterFields = () => (
         <Checkbox name="determinacao" type="checkbox" value="6" />
       </div>
     </div>
+    <div>
+      <label>
+        <span>Ferido</span>
+        <Checkbox name="ferido" type="checkbox" />
+      </label>
+      <label>
+        <Checkbox name="morto" type="checkbox" />
+        <span>Morto</span>
+      </label>
+    </div>
   </section>
 );
 
