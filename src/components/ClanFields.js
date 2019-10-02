@@ -1,8 +1,5 @@
 import React from 'react';
-
 import { Field } from 'react-final-form';
-
-// import TextInput from './Fields/TextInput';
 
 import Clan1 from 'images/clans/clan-1.jpg';
 import Clan2 from 'images/clans/clan-2.jpg';
@@ -13,7 +10,7 @@ import styles from './ClanFields.module.css';
 
 const ClanFields = () =>(
   <section className={styles.clans}>
-    <p>Clãs Influentes</p>
+    <h2 className={styles.clansTitle}>Clãs Influentes</h2>
 
     <div className={styles.clan}>
       <div className={styles.clanName}>

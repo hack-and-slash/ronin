@@ -3,6 +3,10 @@
   margin-left: 3%;
 }
 
+.clansTitle {
+  text-align: center;
+}
+
 .clan {
   border: 1px solid #000;
   border-left: 4px solid #ae3922;
