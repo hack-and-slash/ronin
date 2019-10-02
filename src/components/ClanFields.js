@@ -21,7 +21,7 @@ const ClanFields = () =>(
         <Field name="clan-1-name" component="input" className={styles.clanNameField} />
       </div>
       <Field name="clan-1-description" component="textarea" className={styles.clanDescriptionField} />
-      <img src={Clan1} className={styles.clanLogo} />
+      <img src={Clan1} className={styles.clanLogo} alt="Logotipo do clã" />
     </div>
 
     <div className={styles.clan}>
@@ -30,7 +30,7 @@ const ClanFields = () =>(
         <Field name="clan-2-name" component="input" className={styles.clanNameField} />
       </div>
       <Field name="clan-2-description" component="textarea" className={styles.clanDescriptionField} />
-      <img src={Clan2} className={styles.clanLogo} />
+      <img src={Clan2} className={styles.clanLogo} alt="Logotipo do clã" />
     </div>
 
     <div className={styles.clan}>
@@ -39,7 +39,7 @@ const ClanFields = () =>(
         <Field name="clan-3-name" component="input" className={styles.clanNameField} />
       </div>
       <Field name="clan-3-description" component="textarea" className={styles.clanDescriptionField} />
-      <img src={Clan3} className={styles.clanLogo} />
+      <img src={Clan3} className={styles.clanLogo} alt="Logotipo do clã" />
     </div>
 
     <div className={styles.clan}>
@@ -48,7 +48,7 @@ const ClanFields = () =>(
         <Field name="clan-4-name" component="input" className={styles.clanNameField} />
       </div>
       <Field name="clan-4-description" component="textarea" className={styles.clanDescriptionField} />
-      <img src={Clan4} className={styles.clanLogo} />
+      <img src={Clan4} className={styles.clanLogo} alt="Logotipo do clã" />
     </div>
   </section>
 );
