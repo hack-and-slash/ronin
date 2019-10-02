@@ -1,3 +1,12 @@
+.enemiesFields {
+  width: 35%;
+  margin-left: 3%;
+}
+
+.enemiesFieldsTitle {
+  text-align: center;
+}
+
 .fieldCell {
   border-bottom: 1px solid #000;
 }
@@ -11,4 +20,5 @@
   border: 0;
   line-height: 18px;
   padding: 4px;
+  width: 100%;
 }

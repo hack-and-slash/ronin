@@ -1,7 +1,14 @@
+.alliesFieldsWrapper {
+  width: 65%;
+}
+
+.alliesFieldsTitle {
+  text-align: center;
+}
+
 .alliesFields {
   display: flex;
   flex-wrap: wrap;
-  width: 75%;
 }
 
 .allyCard {

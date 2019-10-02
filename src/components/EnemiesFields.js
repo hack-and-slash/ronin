@@ -25,18 +25,21 @@ Enemy.propTypes = {
 };
 
 const EnemiesFields = () => (
-  <table cellSpacing="0">
-    <thead>
-      <tr>
-        <th className={styles.fieldCell}>Inimigo</th>
-        <th className={styles.fieldCell}>Combate</th>
-        <th className={styles.fieldCell}>Bloqueios</th>
-      </tr>
-    </thead>
-    <tbody>
-      {enemies.map((enemy, index) => <Enemy key={index} id={index}/>)}
-    </tbody>
-  </table>
+  <section className={styles.enemiesFields}>
+    <h2 className={styles.enemiesFieldsTitle}>Inimigos</h2>
+    <table cellSpacing="0">
+      <thead>
+        <tr>
+          <th className={styles.fieldCell}>Inimigo</th>
+          <th className={styles.fieldCell}>Combate</th>
+          <th className={styles.fieldCell}>Bloqueios</th>
+        </tr>
+      </thead>
+      <tbody>
+        {enemies.map((enemy, index) => <Enemy key={index} id={index}/>)}
+      </tbody>
+    </table>
+  </section>
 );
 
 export default EnemiesFields;
