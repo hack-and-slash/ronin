@@ -34,3 +34,16 @@
   margin: 32px 0;
   justify-content: space-around;
 }
+
+.lifeStatus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 64px;
+}
+
+.lifeStatusSeparator {
+  width: 100px;
+  height: 1px;
+  background-color: #000;
+}
