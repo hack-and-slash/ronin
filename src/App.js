@@ -9,27 +9,34 @@ import VillainsFields from 'components/VillainsFields';
 
 import styles from './App.module.css';
 
+import localStorage from './localStorage';
+
 function App() {
   return (
     <Form
       onSubmit={(values) => console.log(values)}
-      render={({ handleSubmit }) => (
-        <form onSubmit={handleSubmit} style={{display: 'flex'}}>
-          <section className={styles.formWrapper}>
-            <div className={styles.firstRow}>
-              <CharacterFields />
-              <ClanFields />
-            </div>
-            <div className={styles.firstRow}>
-              <AlliesFields />
-              <EnemiesFields />
-            </div>
-          </section>
-          <section style={{width: '25%', paddingLeft: 40}}>
-            <VillainsFields />
-          </section>
-        </form>
-      )}
+      initialValues={localStorage.getFormValues()}
+      render={({ handleSubmit, values }) => {
+        localStorage.setFormValues(values);
+
+        return (
+          <form onSubmit={handleSubmit} style={{display: 'flex'}}>
+            <section className={styles.formWrapper}>
+              <div className={styles.firstRow}>
+                <CharacterFields />
+                <ClanFields />
+              </div>
+              <div className={styles.firstRow}>
+                <AlliesFields />
+                <EnemiesFields />
+              </div>
+            </section>
+            <section style={{width: '25%', paddingLeft: 40}}>
+              <VillainsFields />
+            </section>
+          </form>
+        )
+      } }
     />
   );
 }
