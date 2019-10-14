@@ -11,17 +11,24 @@ import styles from './App.module.css';
 
 import localStorage from './localStorage';
 
+export const resetFields = (form) =>
+  () => {
+    const EMPTY_FORM_VALUES = {};
+    form.initialize(EMPTY_FORM_VALUES);
+  };
+
 function App() {
   return (
     <Form
       onSubmit={(values) => console.log(values)}
       initialValues={localStorage.getFormValues()}
-      render={({ handleSubmit, values }) => {
+      render={({ handleSubmit, values, form }) => {
         localStorage.setFormValues(values);
 
         return (
           <form onSubmit={handleSubmit} style={{display: 'flex'}}>
             <section className={styles.formWrapper}>
+              <input type="button" onClick={resetFields(form)} value="limpar" />
               <div className={styles.firstRow}>
                 <CharacterFields />
                 <ClanFields />
