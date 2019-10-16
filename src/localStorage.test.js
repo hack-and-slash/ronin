@@ -1,4 +1,4 @@
-import { setFormValues, getFormValues } from './localStorage';
+import { setFormValues, getFormValues, initialValues } from './localStorage';
 
 beforeEach(localStorage.clear);
 beforeEach(localStorage.getItem.mockClear);
@@ -13,9 +13,17 @@ describe('getFormValues', () => {
     expect(localStorage.getItem).toHaveBeenCalledTimes(1);
   });
 
-  it('expect empty object if no value was previously passed', () => {
+  it('expect initial values if the object is empty', () => {
+    localStorage.setItem('form_values', '{}');
+
     const result = getFormValues();
-    expect(result).toStrictEqual({});
+    expect(result).toStrictEqual(initialValues);
+    expect(localStorage.getItem).toHaveBeenCalledTimes(1);
+  });
+
+  it('expect initial values if no value was previously passed', () => {
+    const result = getFormValues();
+    expect(result).toStrictEqual(initialValues);
     expect(localStorage.getItem).toHaveBeenCalledTimes(1);
   });
 
