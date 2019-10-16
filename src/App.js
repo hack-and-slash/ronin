@@ -11,11 +11,7 @@ import styles from './App.module.css';
 
 import localStorage from './localStorage';
 
-export const resetFields = (form) =>
-  () => {
-    const EMPTY_FORM_VALUES = {};
-    form.initialize(EMPTY_FORM_VALUES);
-  };
+export const resetFields = (form) => () => form.initialize(localStorage.initialValues);
 
 function App() {
   return (
@@ -42,7 +38,7 @@ function App() {
               <VillainsFields />
             </section>
           </form>
-        )
+        );
       } }
     />
   );
