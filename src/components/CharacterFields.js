@@ -16,9 +16,9 @@ const CharacterFields = () => (
         <TextInput label="Combate:" name="combate" />
         <TextInput label="Bloqueio:" name="bloqueio" />
         <TextInput label="Família:" name="familia" />
-        <TextInput label="Pesadelo:" name="pesadelo" />
         <TextInput label="Cicatriz:" name="cicatriz" />
         <TextInput label="Significado:" name="significado" />
+        <TextInput label="Pesadelo:" name="pesadelo" />
       </div>
       <div className={styles.history}>
         <label className={styles.historyLabel}>Histórico</label>
