@@ -1,7 +1,9 @@
 import { resetFields } from './App';
 
+import localStorage from './localStorage';
+
 describe('resetFields', () => {
-  it('expect to run initialize with empty object', () => {
+  it('expect to run initialize with default values', () => {
     const formSpy = {
       initialize: jest.fn(),
     };
@@ -9,6 +11,6 @@ describe('resetFields', () => {
     const func = resetFields(formSpy);
     func();
 
-    expect(formSpy.initialize).toBeCalledWith({});
+    expect(formSpy.initialize).toBeCalledWith(localStorage.initialValues);
   });
 });
